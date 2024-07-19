@@ -1,0 +1,95 @@
+.login-container {
+    background-color: #fff;
+    padding: 30px; /* Increased padding for more space */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Maximum width for larger screens */
+    min-height: 600px; /* Minimum height for the form */
+    height: auto; /* Adjust height automatically based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center horizontally */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.login-container h2 {
+    margin-bottom: 30px; /* Increased margin for more spacing */
+    font-size: 24px;
+    color: #1674AA;
+}
+
+.login-container img {
+    width: 100px;
+    margin-bottom: 30px; /* Increased margin for more spacing */
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px; /* Increased padding for larger input fields */
+    margin: 15px 0; /* Increased margin for more spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px; /* Increased padding for larger button */
+    background-color: #ff5a5a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #e94e4e;
+}
+
+.login-container a {
+    display: inline-flex; /* Align items in a row */
+    margin-top: 15px; /* Spacing from the elements above */
+    color: #1674AA; /* Color for the main text */
+    text-decoration: none;
+    align-items: center; /* Align items vertically */
+}
+
+.login-container span {
+    color: #1674AA; /* Color for the span text */
+    margin-left: 5px; /* Space between "New here?" and "Register" */
+}
+
+
+.login-container span:hover {
+    color: #db0c0c;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 15px; /* Adjusted padding for smaller screens */
+        width: 90%; /* Adjust width for smaller screens */
+        min-height: 500px; /* Adjust minimum height for smaller screens */
+    }
+
+    .login-container h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .login-container img {
+        width: 80px; /* Adjust image size for smaller screens */
+    }
+
+    .login-container input {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .login-container button {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}

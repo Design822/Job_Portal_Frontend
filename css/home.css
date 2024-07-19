@@ -146,9 +146,10 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 700px;
     flex-direction: row;
-    /* min-height: 100vh;
-    background-color: #c0f3c0; */
+    /* min-height: 100vh; */
+    /* background-color: rgba(255, 0, 0, 0.2); */
 }
 
 .img-card {
@@ -180,11 +181,12 @@ nav a {
 
 .img-card label {
     padding: 1.25rem;
-    border: 1px solid #fff3;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 2rem;
     position: absolute;
     bottom: 0;
     left: 0;
+    background-color: #dc354646;
     right: 0;
     z-index: 2;
     color: white;
@@ -194,10 +196,10 @@ nav a {
     font-weight: 600;
     word-break: break-word;
     text-transform: uppercase;
-    max-height: 100%; /* Ensures the label doesn't overflow the card */
-    overflow: hidden; /* Ensures that any overflow content is hidden */
-    white-space: normal; /* Keeps text wrapping normally */
-    text-overflow: ellipsis; /* Ensures overflow text is shown with ellipsis */
+    max-height: 100%;
+    overflow: hidden; 
+    white-space: normal;
+    text-overflow: ellipsis;
 }
 
 .img-card.active label{
@@ -225,7 +227,7 @@ nav a {
 /* Searchbar Section */
 .search-bar {
     position: absolute;
-    bottom: 20px;
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -274,6 +276,7 @@ nav a {
 .categories {
     padding: 2rem;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .categories h2 {
@@ -626,33 +629,97 @@ footer {
 .footer-bottom {
     background-color: #145a86; /* Darker blue */
     color: rgb(255, 255, 255);
-    height: 100px;
+    height: auto; /* Adjust height automatically based on content */
     display: flex;
-    justify-content: space-between; /* Distribute content equally */
-    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    justify-content: center; /* Center align vertically */
+    align-items: center; /* Center align horizontally */
     text-align: center; /* Center text horizontally */
-    /* padding: 1rem;
-    margin-top: 2rem; */
-    font-size: 8px; /* Adjust font size */
+    padding: 1rem; /* Add padding for spacing */
+    font-size: 14px; /* Default font size */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.footer-left,
+.footer-right {
+    width: 100%; /* Full width on smaller screens */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
 }
 
 .footer-left {
-    text-align: left; /* Align content to the left */
-    flex: 1; /* Take up available space */
-    padding-left: 13rem;
+    text-align: center; /* Center content on smaller screens */
     font-size: 14px;
 }
 
 .footer-right {
-    text-align: right; /* Align content to the right */
-    font-size: 14px; /* Adjust font size */
-    padding-right: 17rem;
+    text-align: center; /* Center content on smaller screens */
+    font-size: 14px;
 }
-.footer-right i{
+
+.footer-right i {
     color: red;
 }
+
 hr {
     width: 60%; /* Adjust the width as needed */
     border: 1px solid #ffffffb9; /* Adjust the color and thickness as needed */
     margin: 20px auto; /* Center the horizontal line */
 }
+
+/* Responsive styles for small devices */
+@media (max-width: 375px) { /* iPhone SE and similar devices */
+    .footer-bottom {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    .footer-left, .footer-right {
+        text-align: center; /* Ensure text is centered on very small screens */
+        padding: 0; /* Reset padding */
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    hr {
+        width: 80%; /* Adjust the width for smaller screens */
+    }
+}
+
+@media (min-width: 601px) {
+    .footer-bottom {
+        flex-direction: row; /* Stack items horizontally on larger screens */
+    }
+
+    .footer-left {
+        text-align: left; /* Align content to the left */
+        padding-left: 2rem; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .footer-right {
+        text-align: right; /* Align content to the right */
+        padding-right: 2rem; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-bottom {
+        font-size: 16px; /* Larger font size for bigger screens */
+    }
+
+    .footer-left {
+        padding-left: 3rem; /* Adjust padding for larger screens */
+    }
+
+    .footer-right {
+        padding-right: 3rem; /* Adjust padding for larger screens */
+    }
+}
+
+
+
+/* <------------------------------------------ Job-seekers-login---------------------------------------------------> */
+
+
+
