@@ -159,6 +159,10 @@
     /* text-decoration: underline; */
     color: #e74c3c;
 }
+.notice p{
+    color: #1674AA;
+    font-size: 14px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
