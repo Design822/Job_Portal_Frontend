@@ -44,17 +44,77 @@
     </header>
     <br><br><br><br><br><br><br><br>
     
-    <div class="login-container">
-        <h2>Login as a Employee</h2>
-        <img src="images/login_seekers.png" alt="Job Seeker Illustration">
-        <form>
-            <input type="email" placeholder="Email address..." required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+    <div class="job-seeker-register-container">
+        <h2>Create your free Account !</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your First name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your Last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email address...">
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="profile-upload">Profile</label>
+                <label class="custom-file-upload">
+                    <input type="file" id="profile-upload" name="profile-upload">
+                    Upload Profile
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your Address">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="" disabled selected>Category</option>
+                    <option value="category1">Engineering</option>
+                    <option value="category2">Construction</option>
+                    <option value="category3">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="job-type">Job Type</label>
+                <select id="job-type" name="job-type">
+                    <option value="" disabled selected>Job Type</option>
+                    <option value="full-time">Full-Time</option>
+                    <option value="part-time">Part-Time</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn">Register as Job Seeker</button>
+            <div class="login-link">
+                Already Registered as a Job Seeker? <a href="#">Login Here</a>
+            </div>
         </form>
-        <a href="#">New here? <span>Register</span></a>
     </div>
-    
     <br><br><br><br><br><br>
     <footer>
         <div class="footer-container" style="background-color: #1674AA;">

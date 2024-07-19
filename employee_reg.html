@@ -6,6 +6,7 @@
     <link rel="icon" href="images/favion_vnv.jpg" type="image/png">
     <title>Jobs | Vision & Value Job Portal</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 
@@ -41,8 +42,57 @@
             </div>
         </div>
     </header>
-    <br><br><br><br>
+    <br><br><br><br><br><br><br><br>
     
+    <div class="job-seeker-register-container">
+        <h2>Create your free Account !</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="first-name">Company or Organization full name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your First name">
+            </div>
+            <div class="form-group">
+                <label for="email">Company Email address...</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email address...">
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="profile-upload">Logo</label>
+                <label class="custom-file-upload">
+                    <input type="file" id="profile-upload" name="profile-upload">
+                    Upload Logo
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="address">Company Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter you correct Address">
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="" disabled selected>Category</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn">Register as Employee</button>
+            <div class="login-link">
+                Already Registered as Employee? <a href="#">Login Here</a>
+            </div>
+        </form>
+    </div>
     <br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="footer-container" style="background-color: #1674AA;">
