@@ -207,3 +207,110 @@
         font-size: 1.1em;
     }
 }
+.view-more-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.view-more-link {
+    color: #1674AA;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold; /* Optional: makes the text bold */
+}
+
+.view-more-link i {
+    margin-left: 8px; /* Space between text and icon */
+}
+
+.view-more-link:hover {
+    color: #e74c3c; /* Changes text color on hover */
+}
+
+.page-heading {
+    text-align: center;
+    color: #1674AA;
+    font-size: 3rem;
+    font-family: "Chronica Pro", serif;
+    margin: 20px 0;
+}
+
+.search-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Optional: Limit the maximum width */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    text-decoration: none;
+    color: #1674AA;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #1674AA;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #1674AA;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 10px;
+    border: 1px solid #1674AA;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-box button {
+    padding: 10px;
+    background-color: #1674AA;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
