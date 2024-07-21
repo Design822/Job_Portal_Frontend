@@ -2,10 +2,11 @@
     background-color: #dc3545;
     color: white;
 }
+
 body {
     font-family: "Chronica Pro", serif;
     font-size: 16px;
-    background-color: #fffdfd;
+    background-color: #fffdfdee;
     margin: 0;
     padding: 0;
 }
@@ -717,9 +718,102 @@ hr {
     }
 }
 
+/* --------------------------------------------------------------------- contact us ------------------------------------------------- */
+.contact {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allows wrapping for responsive design */
+    gap: 2rem; /* Space between items */
+}
 
+.contact-info,
+.contact-form {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    width: calc(50% - 2rem); /* Adjust width to fit two items side by side with margin */
+    margin: 0; /* Reset margin */
+}
 
-/* <------------------------------------------ Job-seekers-login---------------------------------------------------> */
+.contact-info h2,
+.contact-form h2 {
+    margin-top: 0;
+    color: #1674AA;
+}
 
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
 
+.contact-info ul li {
+    margin-bottom: 0.5rem;
+}
 
+.map-container {
+    margin: 1rem auto; /* Center the map container horizontally with automatic margins */
+    width: calc(100% - 2rem); /* Adjust width to fit within parent container */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1674AA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #135d8b;
+}
+
+footer {
+    background-color: #1674AA;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        margin: 0; /* Remove margins for full-width */
+    }
+    
+    .map-container {
+        width: 100%;
+    }
+}
