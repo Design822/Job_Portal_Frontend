@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px; 
+    padding: 5px; 
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     z-index: 1000;
@@ -142,15 +142,16 @@ nav a {
     font-family: sans-serif;
     box-sizing: border-box;
 }
-
+/* .card-banner img{
+    height: 300px;
+    width: 100%;
+} */
 #gallery {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 700px;
     flex-direction: row;
-    /* min-height: 100vh; */
-    /* background-color: rgba(255, 0, 0, 0.2); */
 }
 
 .img-card {
