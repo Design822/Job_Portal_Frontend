@@ -686,6 +686,7 @@ ul {
 }
 .copyright-area{
   background: white;
+  border-radius: 30px;
   padding: 25px 0;
 }
 .copyright-text p {
@@ -805,5 +806,109 @@ footer {
     
     .map-container {
         width: 100%;
+    }
+}
+
+/* -------------------------------------------------------------------- total companies ------------------------------------------------------------- */
+
+
+.card-companies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-company {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin: 10px 0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-company:hover {
+    transform: translateY(-5px);
+}
+
+.card-company-left {
+    display: flex;
+    align-items: center;
+}
+
+.card-company-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.card-company-details {
+    flex-grow: 1;
+}
+
+.card-company-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    color: #1674AA;
+}
+
+.card-company-details p {
+    margin: 0;
+    color: #555;
+}
+
+.card-company-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+}
+
+.card-company-right .icon-briefcase {
+    font-size: 1.2em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card-company {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-company-left, .card-company-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-company-left {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-company {
+        padding: 10px;
+    }
+
+    .card-company-logo {
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .card-company-details h3 {
+        font-size: 1em;
+    }
+
+    .card-company-right .icon-briefcase {
+        font-size: 1em;
     }
 }

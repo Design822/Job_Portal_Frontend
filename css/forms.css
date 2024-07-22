@@ -243,8 +243,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
+    background-color: white;
+    box-shadow: 4px 4px 4px 6px rgba(0,0,0,0.1); 
+    border-radius: 50px;
     margin: 0 auto; /* Center the container */
     max-width: 1200px; /* Optional: Limit the maximum width */
 }
@@ -303,13 +304,13 @@
 
 .search-box input {
     padding: 10px;
-    border: 1px solid #0a5889;
+    border: 1px solid #a80404;
     border-radius: 5px 0 0 5px;
 }
 
 .search-box button {
     padding: 10px;
-    background-color: #0a5889;
+    background-color: #a80404;
     color: #fff;
     border: none;
     border-radius: 0 5px 5px 0;
