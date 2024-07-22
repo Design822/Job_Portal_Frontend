@@ -20,7 +20,7 @@
 .login-container h2 {
     margin-bottom: 30px; /* Increased margin for more spacing */
     font-size: 24px;
-    color: #1674AA;
+    color: #0a5889;
 }
 
 .login-container img {
@@ -39,7 +39,7 @@
 .login-container button {
     width: 100%;
     padding: 12px; /* Increased padding for larger button */
-    background-color: #ff5a5a;
+    background-color: #a80404;
     border: none;
     border-radius: 5px;
     color: white;
@@ -48,25 +48,25 @@
 }
 
 .login-container button:hover {
-    background-color: #e94e4e;
+    background-color: #a80404;
 }
 
 .login-container a {
     display: inline-flex; /* Align items in a row */
     margin-top: 15px; /* Spacing from the elements above */
-    color: #1674AA; /* Color for the main text */
+    color: #0a5889; /* Color for the main text */
     text-decoration: none;
     align-items: center; /* Align items vertically */
 }
 
 .login-container span {
-    color: #1674AA; /* Color for the span text */
+    color: #0a5889; /* Color for the span text */
     margin-left: 5px; /* Space between "New here?" and "Register" */
 }
 
 
 .login-container span:hover {
-    color: #db0c0c;
+    color: #a80404;
 }
 
 /* Responsive styles */
@@ -142,7 +142,7 @@
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #e74c3c;
+    background-color: #a80404;
     color: #fff;
     font-size: 1em;
     cursor: pointer;
@@ -152,15 +152,15 @@
     margin-top: 10px;
 }
 .login-link a {
-    color: #1674AA;
+    color: #0a5889;
     text-decoration: none;
 }
 .login-link a:hover {
     /* text-decoration: underline; */
-    color: #e74c3c;
+    color: #a80404;
 }
 .notice p{
-    color: #1674AA;
+    color: #0a5889;
     font-size: 14px;
 }
 
@@ -214,7 +214,7 @@
 }
 /* ---------------------------------------------------------- jobs section search and cat bar -------------------------------------------------- */
 .view-more-link {
-    color: #1674AA;
+    color: #0a5889;
     font-size: 1rem;
     text-decoration: none;
     display: inline-flex;
@@ -227,12 +227,12 @@
 }
 
 .view-more-link:hover {
-    color: #e74c3c; /* Changes text color on hover */
+    color: #a80404; /* Changes text color on hover */
 }
 
 .page-heading {
     text-align: center;
-    color: #1674AA;
+    color: #0a5889;
     font-size: 3rem;
     font-family: "Chronica Pro", serif;
     margin: 20px 0;
@@ -256,7 +256,7 @@
 
 .dropdown-toggle {
     text-decoration: none;
-    color: #1674AA;
+    color: #0a5889;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -271,7 +271,7 @@
     display: none;
     position: absolute;
     background-color: #ffffff;
-    border: 1px solid #1674AA;
+    border: 1px solid #0a5889;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1;
@@ -284,7 +284,7 @@
 .dropdown-content a {
     display: block;
     padding: 10px;
-    color: #1674AA;
+    color: #0a5889;
     text-decoration: none;
     font-weight: bold;
 }
@@ -303,13 +303,13 @@
 
 .search-box input {
     padding: 10px;
-    border: 1px solid #1674AA;
+    border: 1px solid #0a5889;
     border-radius: 5px 0 0 5px;
 }
 
 .search-box button {
     padding: 10px;
-    background-color: #1674AA;
+    background-color: #0a5889;
     color: #fff;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -343,7 +343,7 @@
 .card-header {
     margin: 0;
     font-size: 1.5rem;
-    color: #1674AA;
+    color: #0a5889;
 }
 
 .card-content {
@@ -353,7 +353,7 @@
 }
 
 footer {
-    background-color: #1674AA;
+    background-color: #0a5889;
     color: white;
     padding: 1rem;
     text-align: center;
