@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favion_vnv.jpg" type="image/png">
-    <title>Seekers Registration | Find your perfect job at JobsLink</title>
+    <title>About Us | Find your perfect job at JobsLink</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -60,90 +59,7 @@
             </nav>
         </div>
     </header>
-    <br><br><br><br><br><br><br><br>
-    
-    <div class="job-seeker-register-container">
-        <h2>Create your free Account !</h2>
-        <form action="#">
-            <div class="form-group">
-                <label for="first-name">First name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="Enter your First name">
-            </div>
-            <div class="form-group">
-                <label for="last-name">Last name</label>
-                <input type="text" id="last-name" name="last-name" placeholder="Enter your Last name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your Email address...">
-            </div>
-            <div class="form-group">
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your Phone Number">
-            </div>
-            <div class="form-group">
-                <label for="profile-upload">Profile</label>
-                <label class="custom-file-upload">
-                    <input type="file" id="profile-upload" name="profile-upload">
-                    Upload Profile
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="cv-upload">Upload CV</label>
-                <label class="custom-file-upload">
-                    <input type="file" id="cv-upload" name="cv-upload">
-                    Upload your CV
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" placeholder="Enter your Address">
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender">
-                    <option value="" disabled selected>Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select id="category" name="category">
-                    <option value="" disabled selected>Category</option>
-                    <option value="engineering">Engineering</option>
-                    <option value="construction">Construction</option>
-                    <option value="others">Others</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="job-type">Job Type</label>
-                <select id="job-type" name="job-type">
-                    <option value="" disabled selected>Job Type</option>
-                    <option value="full-time">Full-Time</option>
-                    <option value="part-time">Part-Time</option>
-                    <option value="contract">Contract</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
-            </div>
-            <div class="notice">
-                <p>Notice: Please make sure that all your information is accurate before proceeding to register.</p>
-            </div>
-            <br><br>
-            <button type="submit" class="btn">Register as Job Seeker</button>
-            <div class="login-link">
-                Already Registered as a Job Seeker? <a href="#">Login Here</a>
-            </div>
-        </form>
-    </div>
+    <br><br><br><br><br><br><br><br> 
     <br><br>
     <footer class="footer-section">
         <div class="container">
@@ -254,25 +170,6 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var input = document.querySelector("#phone-number");
-            window.intlTelInput(input, {
-                initialCountry: "auto",
-                geoIpLookup: function(callback) {
-                    fetch('https://ipinfo.io/json', { headers: { 'Accept': 'application/json' }})
-                        .then(response => response.json())
-                        .then(data => {
-                            callback(data.country);
-                        })
-                        .catch(() => {
-                            callback('us');
-                        });
-                },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
             const toggleButton = document.querySelector(".toggle-button");
             const navLinks = document.querySelector("nav.nav-links");
     
@@ -284,3 +181,4 @@
     
 </body>
 </html>
+

@@ -57,6 +57,12 @@ nav.nav-links a {
     font-weight: 600;
     color: #0a5889;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav.nav-links i {
+    margin-right: 8px; /* Space between icon and text */
 }
 
 /* Specific Colors */
@@ -94,16 +100,19 @@ nav.nav-links .red-text {
     padding: 12px 16px;
     font-size: 15px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content a i {
+    margin-right: 8px; /* Space between icon and text */
 }
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-.dropdown a i.fa {
-    color: #a80404; /* Color for dropdown icon */
-}
 .dropdown a i.fa {
     color: #a80404; /* Color for dropdown icon */
 }
@@ -406,14 +415,16 @@ nav.nav-links .red-text {
 }
 
 .job-item {
-    width: 300px;
-    height: 400px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .job-item:hover {
@@ -421,7 +432,7 @@ nav.nav-links .red-text {
 }
 
 .job-item img {
-    width: 40%;
+    width: 80%; /* Adjusted for better responsiveness */
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -455,24 +466,29 @@ nav.nav-links .red-text {
 
 @media (max-width: 1200px) {
     .job-list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Adjust columns for medium screens */
     }
 }
 
 @media (max-width: 992px) {
     .job-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Adjust columns for smaller screens */
     }
 }
 
 @media (max-width: 768px) {
     .job-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .job-item img {
+        width: 100%; /* Full width of the card */
     }
 }
 
 
 
+/* Article Section */
 .articles {
     padding: 2rem;
     text-align: center;
@@ -499,9 +515,8 @@ nav.nav-links .red-text {
 }
 
 .article-content {
-    width: 90%; /* Full width of the grid cell */
-    height: 80%; /* Full height of the grid cell */
-    margin: 3rem;
+    width: 100%; /* Full width of the grid cell */
+    height: 100%; /* Full height of the grid cell */
     background-color: #ffffff;
     padding: 1.5rem; /* Padding inside the content area */
     border-radius: 8px;
@@ -530,7 +545,7 @@ nav.nav-links .red-text {
 }
 
 .article-content p {
-    margin-bottom: 1rem; /* Increased margin bottom for better spacing */
+    margin: 0; /* Remove margin for proper spacing */
     font-size: 0.9rem;
     color: #666;
 }
@@ -543,6 +558,7 @@ nav.nav-links .red-text {
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: center; /* Center the button horizontally */
 }
 
 .article-content button:hover {
@@ -563,7 +579,11 @@ nav.nav-links .red-text {
     }
 
     .article-content {
-        margin: 1.5rem;
+        margin: 1.5rem 0; /* Adjust margin for better spacing */
+    }
+
+    .article-content p {
+        font-size: 1rem; /* Increase font size for readability */
     }
 }
 
@@ -575,9 +595,14 @@ nav.nav-links .red-text {
     }
 
     .article-content {
-        margin: 1rem;
+        margin: 1rem 0; /* Adjust margin for better spacing */
+    }
+
+    .article-content p {
+        font-size: 1rem; /* Increase font size for readability */
     }
 }
+
 
 /* Footer styles */
 ul {
