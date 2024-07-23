@@ -773,7 +773,7 @@ ul {
     display: flex;
     justify-content: center; /* Center items horizontally */
     flex-wrap: wrap; /* Allows wrapping for responsive design */
-    gap: 2rem; /* Space between items */
+    gap: 1rem; /* Reduced space between items for smaller boxes */
 }
 
 .contact-info,
@@ -781,9 +781,10 @@ ul {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 2rem;
-    width: calc(50% - 2rem); /* Adjust width to fit two items side by side with margin */
+    padding: 1rem; /* Reduced padding for smaller boxes */
+    width: calc(50% - 1rem); /* Adjust width to fit two items side by side with reduced margin */
     margin: 0; /* Reset margin */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .contact-info h2,
@@ -798,45 +799,48 @@ ul {
 }
 
 .contact-info ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* Reduced space between list items */
 }
 
 .map-container {
-    margin: 1rem auto; /* Center the map container horizontally with automatic margins */
-    width: calc(100% - 2rem); /* Adjust width to fit within parent container */
+    margin: 0.5rem auto; /* Reduced margin for smaller map container */
+    width: calc(100% - 1rem); /* Adjust width to fit within parent container */
+    max-width: 100%; /* Ensure the map container doesn’t exceed its parent width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .map-container iframe {
     width: 100%;
-    height: 400px;
+    height: 200px; /* Reduced height for smaller map container */
     border: 0;
     border-radius: 8px;
 }
 
 .contact-form label {
     display: block;
-    margin-top: 1rem;
+    margin-top: 0.5rem; /* Reduced margin for smaller labels */
     font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+    padding: 0.25rem; /* Reduced padding for smaller input fields */
+    margin-top: 0.25rem; /* Reduced margin for smaller input fields */
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .contact-form button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
+    margin-top: 0.5rem; /* Reduced margin for smaller buttons */
+    padding: 0.5rem 1rem; /* Reduced padding for smaller buttons */
     background-color: #0a5889;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.875rem; /* Reduced font size for smaller buttons */
 }
 
 .contact-form button:hover {
@@ -846,7 +850,7 @@ ul {
 footer {
     background-color: #0a5889;
     color: white;
-    padding: 1rem;
+    padding: 0.5rem; /* Reduced padding for smaller footer */
     text-align: center;
 }
 
@@ -861,12 +865,16 @@ footer {
     .contact-form {
         width: 100%;
         margin: 0; /* Remove margins for full-width */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
     }
     
     .map-container {
         width: 100%;
+        margin: 0.5rem 0; /* Adjust margins for better spacing */
+        max-width: 100%; /* Ensure the map container doesn’t exceed its parent width */
     }
 }
+
 
 /* -------------------------------------------------------------------- total companies ------------------------------------------------------------- */
 
