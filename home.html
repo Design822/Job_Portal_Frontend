@@ -20,7 +20,10 @@
                     <img src="images/logo.png" alt="Vision & Value Logo" class="logo-img">
                 </a>
             </div>
-            <nav>
+            <div class="toggle-button">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-links">
                 <a href="total_jobs.html" class="jobs">Jobs</a>
                 <a href="total_companies.html" class="companies">Companies</a>
                 <div class="dropdown">
@@ -40,6 +43,10 @@
             </nav>
         </div>
     </header>
+    
+    
+    
+            
     <br><br><br>
     <!-- <div class="card-banner">
         <img src="images/article2.jpg" alt="">
@@ -437,5 +444,15 @@
         </div>
     </footer>
     <script src="js/banner.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.querySelector(".toggle-button");
+            const navLinks = document.querySelector("nav.nav-links");
+    
+            toggleButton.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+            });
+        });
+    </script>    
 </body>
 </html>
