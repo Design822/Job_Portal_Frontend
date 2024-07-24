@@ -121,6 +121,46 @@
             </label>
         </div>
     </section>
+    <div class="hiring-company">
+        <h2>Top Hiring Companies</h2>
+        <br>
+        <div class="top-hiring-manpowers">
+            <div class="manpower-cards">
+                <div class="manpower-card">
+                    <img src="images/image1.jpeg" alt="Vision & Value">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image1.png" alt="Aakarshan International Pvt. Ltd.">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image2.png" alt="International Manpower Recruitment">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image3.png" alt="Oxford International Pvt. Ltd.">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image4.jpg" alt="Vision & Value">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image1.jpeg" alt="Vision & Value">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image1.png" alt="Aakarshan International Pvt. Ltd.">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image2.png" alt="International Manpower Recruitment">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image3.png" alt="Oxford International Pvt. Ltd.">
+                </div>
+                <div class="manpower-card">
+                    <img src="images/image4.jpg" alt="Vision & Value">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 <br><br><br>
     <section class="categories">
         <h2>All Categories</h2>
@@ -472,6 +512,19 @@
                 navLinks.classList.toggle("show");
             });
         });
-    </script>    
+    </script> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const scrollWrapper = document.getElementById('manpower-cards');
+        const cards = Array.from(scrollWrapper.children);
+        const totalCards = cards.length;
+
+        // Clone the cards to create an infinite scroll effect
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            scrollWrapper.appendChild(clone);
+        });
+    });
+    </script>   
 </body>
 </html>
