@@ -68,11 +68,11 @@
                 <h2>Personal Details</h2>
                 <div class="personal-details-grid">
                     <div class="personal-details-item">
-                        <label for="photo">Photo</label>
-                        <input type="file" id="photo" name="photo" accept="image/*" required>
-                        <div class="photo-preview-container">
-                            <img id="photo-preview" src="#" alt="Photo Preview" style="display: none;">
-                        </div>
+                        <label for="photo" id="photo-label">
+                            <span>Choose your Profile Photo (Click Below Logo)</span>
+                            <img id="photo-preview" src="images/profile.png" alt="Profile Icon">
+                        </label>
+                        <input type="file" id="photo" name="photo" accept="image/*" style="display: none;" required>
                     </div>
                     <div class="personal-details-item">
                         <label for="first-name">First Name</label>
@@ -121,12 +121,12 @@
                 </div>
                 <div class="education-grid">
                     <div class="education-item">
-                        <label for="degree">Degree Obtained</label>
+                        <label for="degree">Name of Degree</label>
                         <input type="text" id="degree" name="degree" required>
                     </div>
                     <div class="education-item">
-                        <label for="degree-year">Degree Attained</label>
-                        <input type="date" id="degree-year" name="degree-year" required>
+                        <label for="degree-year">Grade </label>
+                        <input type="text" id="grade" name="grade" required>
                     </div>
                 </div>
                 <div class="education-grid">
@@ -153,12 +153,12 @@
                 </div>
                 <div class="education-grid">
                     <div class="education-item">
-                        <label for="degree">Degree Obtained</label>
+                        <label for="degree">Name of Degree</label>
                         <input type="text" id="degree" name="degree" required>
                     </div>
                     <div class="education-item">
-                        <label for="degree-year">Degree Attained</label>
-                        <input type="date" id="degree-year" name="degree-year" required>
+                        <label for="degree-year">Grade </label>
+                        <input type="text" id="grade" name="grade" required>
                     </div>
                 </div>
                 <div class="education-grid">
@@ -177,21 +177,21 @@
                 <h2>Training</h2>
                 <div class="training-grid">
                     <div class="training-item">
-                        <label for="training-university">Name of University</label>
+                        <label for="training-university">Name of Training Center</label>
                         <input type="text" id="training-university" name="training-university" required>
                     </div>
                     <div class="training-item">
-                        <label for="training-address">University Address</label>
+                        <label for="training-address">Training Center Address</label>
                         <input type="text" id="training-address" name="training-address" required>
                     </div>
                 </div>
                 <div class="training-grid">
                     <div class="training-item">
-                        <label for="training-degree">Degree Obtained</label>
+                        <label for="training-degree">Training Obtained</label>
                         <input type="text" id="training-degree" name="training-degree" required>
                     </div>
                     <div class="training-item">
-                        <label for="training-year">Degree Attained</label>
+                        <label for="training-year">Training Attained</label>
                         <input type="date" id="training-year" name="training-year" required>
                     </div>
                 </div>
@@ -215,7 +215,41 @@
                         <input type="text" id="company-name" name="company-name" required>
                     </div>
                     <div class="work-experience-item">
-                        <label for="location">Location</label>
+                        <label for="location">Company Location</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="work-experience-item">
+                        <label for="location">Position</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                </div>
+                <div class="work-experience-grid">
+                    <div class="work-experience-item">
+                        <label for="job-from">From</label>
+                        <input type="date" id="job-from" name="job-from" required>
+                    </div>
+                    <div class="work-experience-item">
+                        <label for="job-to">To</label>
+                        <input type="date" id="job-to" name="job-to" required>
+                    </div>
+                </div>
+                <div class="duties-container">
+                    <label for="about-me">Duties & Responsibilities</label>
+                    <textarea id="about-me" name="about-me" required></textarea>
+                </div>
+                <hr>
+                <br><br>
+                <div class="work-experience-grid">
+                    <div class="work-experience-item">
+                        <label for="company-name">Company Name</label>
+                        <input type="text" id="company-name" name="company-name" required>
+                    </div>
+                    <div class="work-experience-item">
+                        <label for="location">Company Location</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="work-experience-item">
+                        <label for="location">Position</label>
                         <input type="text" id="location" name="location" required>
                     </div>
                 </div>
@@ -243,23 +277,33 @@
                     <input type="radio" name="english" value="Independent" required> Independent User
                     <input type="radio" name="english" value="Proficient" required> Proficient
                 </div>
+                <br>
                 <div class="language-group">
                     <label>Nepali:</label>
                     <input type="radio" name="nepali" value="Basic" required> Basic User
                     <input type="radio" name="nepali" value="Independent" required> Independent User
                     <input type="radio" name="nepali" value="Proficient" required> Proficient
                 </div>
+                <br>
                 <div class="language-group">
                     <label>Hindi:</label>
                     <input type="radio" name="nepali" value="Basic" required> Basic User
                     <input type="radio" name="nepali" value="Independent" required> Independent User
                     <input type="radio" name="nepali" value="Proficient" required> Proficient
                 </div>
+                <br>
+                <div class="language-group">
+                    <label>Others:</label>
+                    <textarea id="other-language-name" name="other-language-name" required></textarea>
+                    <input type="radio" name="other-language" value="Basic" required> Basic User
+                    <input type="radio" name="other-language" value="Independent" required> Independent User
+                    <input type="radio" name="other-language" value="Proficient" required> Proficient
+                </div>
             </div>
     
             <div class="declaration-container">
-                <label for="declaration">I hereby declare that all the information provided above is true and accurate to the best of my knowledge. If furnished false information, I agree that it may result in rejection of my application or dismissal from employment...</label>
-                <textarea id="declaration" name="declaration" required></textarea>
+                <label for="declaration">Sample: I hereby declare that all the information provided above is true and accurate to the best of my knowledge. If furnished false information, I agree that it may result in rejection of my application or dismissal from employment...</label>
+                <textarea id="declaration" name="declaration" placeholder="Please write your declaration(closing statement) like above sample where we provide you....."></textarea>
             </div>
     
             <div class="submit-container">
@@ -388,19 +432,23 @@
     </script>
     <script>
         document.getElementById('photo').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        const reader = new FileReader();
-        
-        reader.onload = function(e) {
-            const photoPreview = document.getElementById('photo-preview');
-            photoPreview.src = e.target.result;
-            photoPreview.style.display = 'block'; // Show the image
-        }
-        
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    });
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const photoPreview = document.getElementById('photo-preview');
+                photoPreview.src = e.target.result;
+                photoPreview.style.display = 'block'; // Show the image
+            }
+            
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('photo-label').addEventListener('click', function() {
+            document.getElementById('photo').click();
+        });
     </script>
 
     </body>

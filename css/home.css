@@ -1229,18 +1229,50 @@ textarea {
     resize: vertical;
     height: 300px;
 }
-.photo-preview-container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
+
+#photo-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 #photo-preview {
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #1674AA; /* Optional border color */
-    display: block;
+    /* border: 7px solid #a8abae; Optional border color */
+    margin-bottom: 5px;
+}
+
+.submit-container {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #1674AA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #145a8a;
+}
+.language-group textarea {
+    width: 20%;
+    height: 30px;
+    /* padding: 5px; */
+    /* margin-top: 10px; */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.declaration-container label{
+    color: #a80404;
 }
