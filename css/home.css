@@ -204,7 +204,7 @@ nav.nav-links .red-text {
     overflow: hidden; /* Ensures that any overflow content is hidden */
     border-radius: 2rem;
     cursor: pointer;
-    background-color: #24242436;
+    background-color: #ff000036;
     transition: all 0.75s ease-in-out;
     position: relative; /* Added for positioning the label */
 }
@@ -225,18 +225,18 @@ nav.nav-links .red-text {
 }
 
 .img-card label {
-    padding: 1.25rem;
+    padding: 1.5rem;
     border: 1px solid rgb(255, 255, 255);
     border-radius: 2rem;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #dc354646;
+    background-color: #a80404;
     right: 0;
     z-index: 2;
     color: white;
-    backdrop-filter: blur(8px) brightness(85%);
-    -webkit-backdrop-filter: blur(8px) brightness(85%);
+    /* backdrop-filter: blur(8px) brightness(85%);
+    -webkit-backdrop-filter: blur(8px) brightness(85%); */
     font-size: 1rem;
     font-weight: 600;
     word-break: break-word;
@@ -998,8 +998,8 @@ footer {
 
 .top-hiring-manpowers {
     background-color: #ffffff;
-    border-top-left-radius: 100px; /* Top-left border radius */
-    border-bottom-right-radius: 100px; /* Bottom-right border radius */
+    border-top-left-radius: 70px; /* Top-left border radius */
+    border-bottom-right-radius: 70px; /* Bottom-right border radius */
     box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
     padding: 20px;
     width: 100%;
@@ -1097,4 +1097,150 @@ footer {
             transform: translateX(-300%); /* Adjust scroll distance for smaller screens */
         }
     }
+}
+
+/* ---------------------------------------------------------------------------------------------create cv------------------------------------------------------------------------------------------------------ */
+.cv-form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cv-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.personal-details-container,
+.education-container,
+.training-container,
+.work-experience-container,
+.language-container,
+.declaration-container,
+.submit-container {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.personal-details-container h2,
+.education-container h2,
+.training-container h2,
+.work-experience-container h2,
+.language-container h2,
+.declaration-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #1674AA;
+    padding-bottom: 5px;
+}
+
+.personal-details-grid,
+.education-grid,
+.training-grid,
+.work-experience-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.personal-details-item,
+.education-item,
+.training-item,
+.work-experience-item {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+.submit-button {
+    background: linear-gradient(135deg, #1674AA, #1E90FF);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #1E90FF, #1674AA);
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background: #1E90FF;
+    transform: scale(0.98);
+}
+
+.submit-container {
+    text-align: center;
+}
+.add-more-btn {
+    background: #1674AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.add-more-btn:hover {
+    background: #1E90FF;
+}
+.duties-container textarea{
+    resize: vertical;
+    height: 300px;
+}
+.photo-preview-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+#photo-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1674AA; /* Optional border color */
+    display: block;
 }
