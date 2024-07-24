@@ -1152,13 +1152,14 @@ footer {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .personal-details-item,
 .education-item,
 .training-item,
 .work-experience-item {
-    flex: 1;
+    flex: 1 1 calc(50% - 15px); /* Adjust width on smaller screens */
 }
 
 label {
@@ -1183,6 +1184,7 @@ textarea {
     resize: vertical;
     height: 100px;
 }
+
 .submit-button {
     background: linear-gradient(135deg, #1674AA, #1E90FF);
     color: white;
@@ -1209,6 +1211,7 @@ textarea {
 .submit-container {
     text-align: center;
 }
+
 .add-more-btn {
     background: #1674AA;
     color: white;
@@ -1225,7 +1228,8 @@ textarea {
 .add-more-btn:hover {
     background: #1E90FF;
 }
-.duties-container textarea{
+
+.duties-container textarea {
     resize: vertical;
     height: 300px;
 }
@@ -1256,6 +1260,7 @@ textarea {
     color: #fff;
     padding: 10px 20px;
     border: none;
+    width: 1100px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -1264,6 +1269,7 @@ textarea {
 .submit-button:hover {
     background-color: #145a8a;
 }
+
 .language-group textarea {
     width: 20%;
     height: 30px;
@@ -1273,6 +1279,43 @@ textarea {
     border: 1px solid #ccc;
     resize: none;
 }
-.declaration-container label{
+
+.declaration-container label {
     color: #a80404;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .cv-form-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .personal-details-item,
+    .education-item,
+    .training-item,
+    .work-experience-item {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+
+    .language-group textarea {
+        width: 100%; /* Full width on small screens */
+        height: 50px; /* Adjusted height */
+    }
+}
+
+@media (max-width: 480px) {
+    .cv-form-container {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .submit-button,
+    .add-more-btn {
+        width: 100%; /* Full width on extra small screens */
+    }
+
+    .submit-button {
+        padding: 10px;
+    }
 }
