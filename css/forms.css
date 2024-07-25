@@ -390,6 +390,8 @@ footer {
 
 .logo-detail {
     max-width: 150px;
+    border-radius: 2px;
+    color: #555;
 }
 
 .apply-btn {
