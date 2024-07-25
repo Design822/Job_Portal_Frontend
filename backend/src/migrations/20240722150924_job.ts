@@ -6,7 +6,6 @@ export async function up(knex: Knex): Promise<void> {
     table.string("category_name");
     table.boolean("accepted").defaultTo(false);
     table.timestamps(true, true);
-
   });
 }
 
