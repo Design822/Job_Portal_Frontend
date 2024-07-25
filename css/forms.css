@@ -419,7 +419,11 @@ footer {
     cursor: pointer;
     border-radius: 5px;
 }
-
+.apply-text {
+    color: #a80404; /* Red color */
+    cursor: pointer; /* Pointer cursor to indicate clickable text */
+    font-weight: bold; /* Optional: to make the text bold */
+}
 .details {
     margin-bottom: 30px;
 }
