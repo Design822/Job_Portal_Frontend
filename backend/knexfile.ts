@@ -8,10 +8,11 @@ const config: { [key: string]: Knex.Config } = {
   development: {
     client: "postgresql",
     connection: {
-      host: process.env.DATABASE_HOST,
-      database: process.env.DATABASE_NAME,
-      user: process.env.DATABSE_USER,
-      password: process.env.DATABASE_PASSWORD,
+      host: "localhost",
+      database: "job_portal",
+      user: "pg",
+      password: "976747",
+      port: 5432,
     },
 
     migrations: {
