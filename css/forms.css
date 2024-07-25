@@ -106,19 +106,23 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .job-seeker-register-container h2 {
     margin-bottom: 20px;
     font-size: 1.5em;
     font-weight: 600;
     text-align: center;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
 }
+
 .form-group input,
 .form-group select {
     width: 100%;
@@ -126,9 +130,11 @@
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 .form-group input[type="file"] {
     display: none;
 }
+
 .custom-file-upload {
     display: inline-block;
     padding: 10px 20px;
@@ -137,6 +143,7 @@
     border-radius: 4px;
     background-color: #eee;
 }
+
 .btn {
     width: 100%;
     padding: 10px;
@@ -147,19 +154,22 @@
     font-size: 1em;
     cursor: pointer;
 }
+
 .login-link {
     text-align: center;
     margin-top: 10px;
 }
+
 .login-link a {
     color: #0a5889;
     text-decoration: none;
 }
+
 .login-link a:hover {
-    /* text-decoration: underline; */
     color: #a80404;
 }
-.notice p{
+
+.notice p {
     color: #0a5889;
     font-size: 14px;
 }
@@ -167,25 +177,28 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .job-seeker-register-container {
-        max-width: 100%;
+        max-width: 90%; /* Reduce max-width for better responsiveness */
         padding: 15px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 @media (max-width: 480px) {
     .job-seeker-register-container {
+        max-width: 95%; /* Further reduce max-width */
         padding: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
     .form-group input,
     .form-group select,
     .custom-file-upload,
     .btn {
         padding: 8px;
     }
+
     .job-seeker-register-container h2 {
         font-size: 1.2em;
     }
@@ -193,16 +206,19 @@
 
 @media (max-width: 375px) {
     .job-seeker-register-container {
+        max-width: 100%; /* Full width on very small screens */
         padding: 10px;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
     .form-group input,
     .form-group select,
     .custom-file-upload,
     .btn {
         padding: 6px;
     }
+
     .job-seeker-register-container h2 {
         font-size: 1.1em;
     }
@@ -212,6 +228,7 @@
     text-align: center;
     margin: 20px 0;
 }
+
 /* ---------------------------------------------------------- jobs section search and cat bar -------------------------------------------------- */
 .view-more-link {
     color: #0a5889;
