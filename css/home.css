@@ -21,7 +21,7 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
     z-index: 1000;
 }
 
@@ -86,7 +86,7 @@ nav.nav-links .red-text {
     background-color: #f9f9f9;
     min-width: 160px;
     border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
     z-index: 1;
     text-align: center;
 }
@@ -158,7 +158,7 @@ nav.nav-links .red-text {
         position: absolute;
         top: 60px; /* Adjust this value based on your header height */
         background-color: #ffffff;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* box-shadow: 0 4px 8px rgba(36, 131, 255, 0.897); */
     }
 
     nav.nav-links.show {
@@ -354,7 +354,7 @@ nav.nav-links .red-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
 }
 
 .category-item i {
@@ -367,7 +367,7 @@ nav.nav-links .red-text {
     background-color: #a80404;
     color: #fff;
     border-color: #a80404;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
 }
 
 .category-item:hover i {
@@ -419,7 +419,7 @@ nav.nav-links .red-text {
     border: 1px solid #ddd;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -520,7 +520,7 @@ nav.nav-links .red-text {
     background-color: #ffffff;
     padding: 1.5rem; /* Padding inside the content area */
     border-radius: 8px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -612,7 +612,7 @@ ul {
 .footer-section {
   background: #0a5889;
   position: relative;
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
 }
 .footer-cta {
   border-bottom: 1px solid white;
@@ -890,7 +890,7 @@ footer {
 .card-company {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
     width: 90%;
     max-width: 1000px;
     height: auto;
@@ -1106,7 +1106,7 @@ footer {
     margin: 20px auto;
     max-width: 1200px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
 }
 
 .cv-form-container h1 {
@@ -1130,7 +1130,7 @@ footer {
     padding: 15px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
 }
 
 .personal-details-container h2,
