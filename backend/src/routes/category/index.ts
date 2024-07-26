@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction, Router } from "express";
+import { Router } from "express";
 import cateygoryController from "./category";
 
 const router = Router();
