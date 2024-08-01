@@ -7,7 +7,7 @@ export async function up(knex: Knex): Promise<void> {
     table.string("position");
     table.string("no_of_vacancies");
     table.string("salary");
-    table.enum("Time", ["fulltime", "parttime", "contract"]);
+    table.enum("time", ["fulltime", "parttime", "contract"]);
     table.date("starting_date");
     table.date("ending_date");
     table.enum("gender", ["male", "female", "other", "both"]);
@@ -15,8 +15,9 @@ export async function up(knex: Knex): Promise<void> {
     table.string("job_summary");
     table.string("job_description");
     table.string("skills");
+    table.boolean("verify").defaultTo(false);
     table.integer("category_id").unsigned();
-    table.integer("comapny_id").unsigned();
+    table.integer("company_id").unsigned();
     table
       .foreign("category_id")
       .references("id")
