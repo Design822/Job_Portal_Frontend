@@ -8,18 +8,22 @@ const getCategory = async (req: Request, res: Response, next: NextFunction) => {
     if (id) {
       const getByID = await db("category").where({ id }).first();
       if (getByID) {
-        res.status(200).json(responder(true, `category on id: ${id}`, getByID));
+        return res
+          .status(200)
+          .json(responder(true, `category on id: ${id}`, getByID));
       } else {
-        res
+        return res
           .status(404)
           .json(responder(false, `There is no category on id: ${id}`));
       }
     } else {
       const getAllCategory = await db("category").select("*");
       if (getAllCategory) {
-        res.status(200).json(responder(true, `All category`, getAllCategory));
+        return res
+          .status(200)
+          .json(responder(true, `All category`, getAllCategory));
       } else {
-        res.status(404).json(responder(false, `There are no category`));
+        return res.status(404).json(responder(false, `There are no category`));
       }
     }
   } catch (error) {
@@ -31,14 +35,16 @@ const createCategory = async (req: any, res: any, next: any) => {
   try {
     const { category_name, accepted } = req.body;
     if (!category_name) {
-      res
+      return res
         .status(404)
         .json(responder(false, "Please wirte name of the category"));
     } else {
       await db("category")
         .insert({ category_name, accepted })
         .then((category) => {
-          res.status(201).json(responder(true, `Category create sucessfully`));
+          return res
+            .status(201)
+            .json(responder(true, `Category create sucessfully`));
         })
         .catch((error) => {
           errorLog(error, res, next);
@@ -62,11 +68,11 @@ const updateCategoryByID = async (req: any, res: any, next: any) => {
         })
         .then((category) => {
           if (category) {
-            res
+            return res
               .status(202)
               .json(responder(true, `Category updated at id: ${id}`));
           } else {
-            res
+            return res
               .status(404)
               .josn(responder(false, `There is no category on id: ${id}`));
           }
@@ -92,11 +98,11 @@ const deleteCategoryByID = async (
       .del()
       .then((category) => {
         if (category) {
-          res
+          return res
             .status(202)
             .json(responder(true, `Category delete sucessfully on id: ${id}`));
         } else {
-          res
+          return res
             .status(404)
             .json(
               responder(false, `There is no category on id: ${id} to delete`)
