@@ -507,14 +507,22 @@ footer {
 
 .post-job-form .form-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 15px;
+}
+
+.post-job-form .form-group label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
 }
 
 .post-job-form .form-group input,
 .post-job-form .form-group select,
 .post-job-form .form-group textarea {
-    width: 48%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;

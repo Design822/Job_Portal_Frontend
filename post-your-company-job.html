@@ -65,13 +65,15 @@
         <h2>Post your job</h2>
         <form class="post-job-form">
             <div class="form-group">
-                <input type="text" placeholder="Company name">
-                <input type="text" placeholder="Position">
+                <label for="position">Position</label>
+                <input type="text" id="position" placeholder="Position">
             </div>
             <div class="form-group">
-                <input type="number" placeholder="No. of Vacancies">
-                <select>
-                    <option value="" disabled selected>Your Company Category</option>
+                <label for="vacancies">No. of Vacancies</label>
+                <input type="number" id="vacancies" placeholder="No. of Vacancies">
+                <label for="required-field">Required Field</label>
+                <select id="required-field">
+                    <option value="" disabled selected>Required Field</option>
                     <option value="IT">IT</option>
                     <option value="Marketing">Marketing</option>
                     <option value="Finance">Finance</option>
@@ -81,40 +83,50 @@
                 </select>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Salary">
-                <input type="text" placeholder="Job Type">
+                <label for="salary">Salary</label>
+                <input type="text" id="salary" placeholder="Salary">
+                <label for="job-type">Job Type</label>
+                <input type="text" id="job-type" placeholder="Job Type">
             </div>
             <div class="form-group">
-                <input type="date" placeholder="Posted Date">
-                <input type="date" placeholder="Last Date">
+                <label for="posted-date">Posted Date</label>
+                <input type="date" id="posted-date" placeholder="Posted Date">
+                <label for="last-date">Last Date</label>
+                <input type="date" id="last-date" placeholder="Last Date">
             </div>
             <div class="form-group">
-                <select>
+                <label for="gender-required">Gender Required</label>
+                <select id="gender-required">
                     <option value="" disabled selected>Gender Required</option>
-                    <option value="IT">Male</option>
-                    <option value="Marketing">Female</option>
-                    <option value="Finance">Male & Female</option>
-                    <option value="Engineering">Others</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Male & Female">Male & Female</option>
+                    <option value="Others">Others</option>
                 </select>
-                <input type="text" placeholder="Education Required">
+                <label for="education-required">Education Required</label>
+                <input type="text" id="education-required" placeholder="Education Required">
             </div>
             <div class="form-group">
-                <textarea placeholder="Job Summary"></textarea>
+                <label for="job-summary">Job Summary</label>
+                <textarea id="job-summary" placeholder="Job Summary"></textarea>
             </div>
             <div class="form-group">
-                <textarea placeholder="Job Description"></textarea>
+                <label for="job-description">Job Description</label>
+                <textarea id="job-description" placeholder="Job Description"></textarea>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Key Skills">
-                <label class="custom-file-upload">
+                <label for="key-skills">Key Skills</label>
+                <input type="text" id="key-skills" placeholder="Key Skills">
+                <!-- <label class="custom-file-upload">
                     <input type="file">
                     Company Logo
-                </label>
+                </label> -->
             </div>
-            <br><br>
-            <button type="submit" class="post-job-btn">Post Job</button>
+            <button type="submit" class="post-job-btn">Submit</button>
         </form>
     </div>
+    
+    
     
     
     <br><br><br><br><br>

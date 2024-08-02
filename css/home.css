@@ -1120,7 +1120,7 @@ footer {
     gap: 15px;
 }
 
-.personal-details-container,
+.personal-details-cv-container,
 .education-container,
 .training-container,
 .work-experience-container,
@@ -1133,7 +1133,7 @@ footer {
     box-shadow: 0 4px 12px rgba(36, 131, 255, 0.897);
 }
 
-.personal-details-container h2,
+.personal-details-cv-container h2,
 .education-container h2,
 .training-container h2,
 .work-experience-container h2,
