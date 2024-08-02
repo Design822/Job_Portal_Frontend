@@ -107,37 +107,37 @@ const registerCompany = async (req: any, res: Response, next: NextFunction) => {
     const img = req.file.filename;
     if (!img) {
       return req
-        .status(404)
+        .status(403)
         .json(responder(false, `Please upload company image`));
     }
     if (!name_of_company) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please write the name of company"));
     }
     if (!phone) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please write contact number of compnay"));
     }
     if (!company_email) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please write company email address"));
     }
     if (!company_address) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please write the location of your company"));
     }
     if (!password) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please write password for the company"));
     }
     if (!conformPassword) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please put conform your password"));
     }
     const email = await db("company").where({ company_email }).first();
@@ -208,7 +208,7 @@ const loginCompany = async (
   }
 };
 
-export  {
+export {
   getCompany,
   updateCompany,
   deleteCompnay,

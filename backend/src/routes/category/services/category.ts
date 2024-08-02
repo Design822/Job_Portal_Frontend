@@ -36,7 +36,7 @@ const createCategory = async (req: any, res: any, next: any) => {
     const { category_name, accepted } = req.body;
     if (!category_name) {
       return res
-        .status(404)
+        .status(403)
         .json(responder(false, "Please wirte name of the category"));
     } else {
       await db("category")

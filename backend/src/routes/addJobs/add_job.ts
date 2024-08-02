@@ -72,6 +72,57 @@ router.post(
         skills,
         category_id,
       } = req.body;
+      if (!title) {
+        return res.status(403).json(responder(false, "Title is missing"));
+      }
+      if (!position) {
+        return res.status(403).json(responder(false, "Position is missing"));
+      }
+      if (!no_of_vacancies) {
+        return res.status(403).json(responder(false, "Vacancies is empty"));
+      }
+      if (!salary) {
+        return res.status(403).json(responder(false, "Salary is missing"));
+      }
+      if (time !== "fulltime" || "parttime" || "contract") {
+        return res.status(403).json(responder(false, "please insert the time"));
+      }
+      if (!starting_date) {
+        return res
+          .status(403)
+          .json(responder(false, "Started date is missing"));
+      }
+      if (!ending_date) {
+        return res.status(403).json(responder(false, "ending date is missing"));
+      }
+      if (gender !== "male" || "female" || "others") {
+        return res.status(403).json(responder(false, "Please select gender"));
+      }
+      if (!education_required) {
+        return res
+          .status(403)
+          .json(responder(false, "Eductaion field is empty"));
+      }
+      if (!job_description) {
+        return res
+          .status(403)
+          .json(responder(false, "Write description about the job"));
+      }
+      if (!job_summary) {
+        return res
+          .status(403)
+          .json(responder(false, "Write summary about your job"));
+      }
+      if (!skills) {
+        return res
+          .status(403)
+          .json(responder(false, "write the skills required in your job"));
+      }
+      if (!category_id) {
+        return res
+          .status(403)
+          .json(responder(false, "category field is missing"));
+      }
     } catch (error) {
       errorLog(error, res, next);
     }
