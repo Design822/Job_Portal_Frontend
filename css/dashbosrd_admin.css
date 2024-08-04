@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #004481;
+    color: white;
+    width: 250px;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo h2 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.sidebar ul li ul li {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 22%;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.stat-label {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.enquiries h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table thead th {
+    background-color: #666;
+    color: white;
+    padding: 10px;
+}
+
+table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+table tbody a {
+    color: #004481;
+    text-decoration: none;
+}
+
+table tbody a:hover {
+    text-decoration: underline;
+}
