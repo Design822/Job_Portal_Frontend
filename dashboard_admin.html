@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="icon" href="images/social-logo.jpg" type="image/png">
     <link rel="stylesheet" href="css/dashbosrd_admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -14,65 +14,68 @@
                 <img src="images/logo-footer.png" alt="Vision & Value Overseas">
             </div>
             <ul>
-                <li>Dashboard</li>
-                <br>
-                <li>Job Seekers Section
-                    <ul>
-                        <li>Job Seekers Register</li>
-                        <li>Posted Jobs</li>
-                        <li>Job Seekers Profile</li>
+                <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-user"></i> Job Seekers Section <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Job Seekers Register</a></li>
+                        <li><a href="#">Posted Jobs</a></li>
+                        <li><a href="#">Job Seekers Profile</a></li>
                     </ul>
                 </li>
-                <br>
-                <li>Employer Section
-                    <ul>
-                        <li>Employer Register</li>
-                        <li>Applied Jobs</li>
-                        <li>Employer Profile</li>
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-briefcase"></i> Employer Section <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Employer Register</a></li>
+                        <li><a href="#">Applied Jobs</a></li>
+                        <li><a href="#">Employer Profile</a></li>
                     </ul>
                 </li>
-                <br>
-                <li>Web & App Settings
-                    <ul>
-                        <li>Header</li>
-                        <li>Footer</li>
-                        <li>Company Slider</li>
-                        <li>News and Articles</li>
-                        <li>Banner Slider</li>
-                        <li>Feature Jobs</li>
-                        <li>Hot Jobs</li>
-                        <li>Contact us</li>
-                        <li>About us</li>
-                        <li>Terms & Conditions</li>
-                        <li>Our Services</li>
-                        <li>Privacy Policy</li>
-                        <li>Companies</li>
-                        <li>Jobs</li>
-                        <li>Our Reviews</li>
+                <li class="has-submenu">
+                    <a href="#"><i class="fas fa-cogs"></i> Home Page Settings <i class="fas fa-chevron-down toggle-icon"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Header Contents</a></li>
+                        <li><a href="#">Footer Contents</a></li>
+                        <li><a href="#">Hiring Company Contents</a></li>
+                        <li><a href="#">Company Slider Contents</a></li>
+                        <li><a href="#">Banner Slider Contents</a></li>
                     </ul>
                 </li>
+                <li><a href="#"><i class="fas fa-user-shield"></i> Admin</a></li>
+                <li><a href="#"><i class="fas fa-clipboard-list"></i> Jobs Section</a></li>
+                <li><a href="#"><i class="fas fa-building"></i> Companies Section</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact us</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About us</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy & Policy Section</a></li>
+                <li><a href="#"><i class="fas fa-file-contract"></i> Terms & Condition Section</a></li>
+                <li><a href="#"><i class="fas fa-concierge-bell"></i> Our Services Section</a></li>
             </ul>
         </div>
         <div class="main-content">
             <div class="header">
                 <h1>Dashboard Overview</h1>
+                <a href="#" class="logout"><i class="fas fa-sign-out-alt rotate-icon"></i></a>
             </div>
             <div class="stats">
                 <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-value">10</div>
                     <div class="stat-label">No of Job Seekers</div>
-                    <div class="stat-value">10</div>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-user-tie"></i></div>
+                    <div class="stat-value">10</div>
                     <div class="stat-label">No of Employee</div>
-                    <div class="stat-value">10</div>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="stat-value">10</div>
                     <div class="stat-label">No of Vacancies</div>
-                    <div class="stat-value">10</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-label">JobsLink Enquiry</div>
+                    <div class="stat-icon"><i class="fas fa-envelope"></i></div>
                     <div class="stat-value">10</div>
+                    <div class="stat-label">JobsLink Enquiry</div>
                 </div>
             </div>
             <div class="enquiries">
@@ -122,5 +125,25 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var submenuLinks = document.querySelectorAll('.has-submenu > a');
+
+            submenuLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var submenu = this.nextElementSibling;
+                    var icon = this.querySelector('.toggle-icon');
+                    if (submenu.style.display === 'block') {
+                        submenu.style.display = 'none';
+                        icon.classList.remove('rotate');
+                    } else {
+                        submenu.style.display = 'block';
+                        icon.classList.add('rotate');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
