@@ -27,6 +27,7 @@ body {
     overflow-y: auto;
     position: fixed;
     height: 100vh;
+    display: none; /* Initially hide sidebar */
 }
 
 .logo {
@@ -37,6 +38,13 @@ body {
 .logo img {
     max-width: 100%;
     height: auto;
+}
+
+.close-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    display: none; /* Initially hide close icon */
 }
 
 .sidebar ul {
@@ -94,10 +102,23 @@ body {
     padding: 20px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .header h1 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
+}
+
+.toggle-button {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; /* Initially hide toggle button */
 }
 
 /* Enquiries */
@@ -145,6 +166,7 @@ table tbody a {
 table tbody a:hover {
     text-decoration: underline;
 }
+
 /* Stats */
 .stats {
     display: flex;
@@ -188,29 +210,140 @@ table tbody a:hover {
     font-size: 1em;
     color: #666;
 }
-.header {
-    display: flex;
-    justify-content: space-between; /* Space between title and logout */
-    align-items: center; /* Center vertically */
-    margin-bottom: 20px;
-}
+
 .logout {
-    background-color: #a80404; /* Background color for the button */
-    color: white; /* Text color */
-    padding: 10px 15px; /* Padding for the button */
-    border: none; /* No border */
-    border-radius: 200px; /* Rounded corners */
-    text-decoration: none; /* No underline */
-    transition: background 0.3s; /* Transition for hover effect */
+    background-color: #a80404;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 200px;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .logout:hover {
-    background-color: #0a5889; /* Change background on hover */
+    background-color: #0a5889;
 }
+
 .rotate-icon {
-    transition: transform 0.3s; /* Transition for smooth rotation */
+    transition: transform 0.3s;
 }
 
 .logout:hover .rotate-icon {
-    transform: rotate(180deg); /* Rotate icon on hover */
+    transform: rotate(180deg);
+}
+
+.view-icon {
+    color: #0a5889;
+    text-decoration: none;
+}
+
+.view-icon:hover {
+    color: #a80404;
+}
+
+.edit-icon {
+    color: #a80404;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.edit-icon:hover {
+    color: #0a5889;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto; /* Allow height to be dynamic */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove left margin for main content */
+        padding: 10px; /* Add padding */
+    }
+
+    .toggle-button {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .close-icon {
+        display: block; /* Show close icon on mobile */
+        text-align: right; /* Align close icon to right */
+    }
+
+    .stats {
+        flex-direction: column; /* Stack stats vertically */
+        align-items: center; /* Center align stats */
+    }
+
+    .stat-item {
+        width: 100%; /* Full width for stat items */
+        margin-bottom: 10px; /* Space between stat items */
+    }
+
+    .header {
+        flex-direction: column; /* Stack header items */
+        align-items: flex-start; /* Align header items */
+    }
+
+    .logout {
+        margin-top: 10px; /* Space above logout button */
+    }
+
+    /* Adjust the table */
+    table {
+        font-size: 0.9em; /* Smaller font for table */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 10px; /* Reduce sidebar padding */
+    }
+
+    .sidebar a {
+        font-size: 0.9em; /* Smaller font size for links */
+    }
+
+    .stat-item {
+        padding: 15px; /* Smaller padding for stat items */
+    }
+
+    table {
+        font-size: 0.8em; /* Smaller font for table */
+    }
+}
+/* Sidebar */
+.sidebar {
+    background-color: #0a5889;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    position: fixed; /* Keep the sidebar fixed */
+    height: 100vh; /* Full height */
+    display: block; /* Always display on larger screens */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on mobile by default */
+        width: 100%; /* Full width for mobile */
+        position: relative; /* Change position for mobile */
+        height: auto; /* Allow height to be dynamic */
+    }
+
+    /* Toggle button */
+    .toggle-button {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    /* Close icon */
+    .close-icon {
+        display: block; /* Show close icon on mobile */
+        text-align: right; /* Align close icon to right */
+    }
 }
