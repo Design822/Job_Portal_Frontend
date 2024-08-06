@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="css/dashbosrd_admin.css">
+    <link rel="stylesheet" href="css/dashboard_admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -12,6 +12,7 @@
         <div class="sidebar">
             <div class="logo">
                 <img src="images/logo-footer.png" alt="Vision & Value Overseas">
+                <i class="fas fa-times close-icon"></i>
             </div>
             <ul>
                 <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
@@ -83,97 +84,104 @@
             <div class="enquiries">
                 <h2>JobsLink Enquiry</h2>
                 <br><br>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Full Name</th>
-                            <th>Email</th>
-                            <th>Phone No.</th>
-                            <th>Message</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Paras Ayer</td>
-                            <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
-                            <td>+977-9865623115</td>
-                            <td>Hello! Please app.</td>
-                            <td>
-                                <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> <!-- Edit icon -->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Paras Ayer</td>
-                            <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
-                            <td>+977-9865623115</td>
-                            <td>Hello! Please app.</td>
-                            <td>
-                                <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Paras Ayer</td>
-                            <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
-                            <td>+977-9865623115</td>
-                            <td>Hello! Please app.</td>
-                            <td>
-                                <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Paras Ayer</td>
-                            <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
-                            <td>+977-9865623115</td>
-                            <td>Hello! Please app.</td>
-                            <td>
-                                <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Paras Ayer</td>
-                            <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
-                            <td>+977-9865623115</td>
-                            <td>Hello! Please app.</td>
-                            <td>
-                                <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
-                                <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>                       
+                <div class="enquiries-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Phone No.</th>
+                                <th>Message</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paras Ayer</td>
+                                <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
+                                <td>+977-9865623115</td>
+                                <td>Hello! Please app.</td>
+                                <td>
+                                    <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a> <!-- Edit icon -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paras Ayer</td>
+                                <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
+                                <td>+977-9865623115</td>
+                                <td>Hello! Please app.</td>
+                                <td>
+                                    <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paras Ayer</td>
+                                <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
+                                <td>+977-9865623115</td>
+                                <td>Hello! Please app.</td>
+                                <td>
+                                    <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paras Ayer</td>
+                                <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
+                                <td>+977-9865623115</td>
+                                <td>Hello! Please app.</td>
+                                <td>
+                                    <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paras Ayer</td>
+                                <td><a href="mailto:paras.ayer123@gmail.com">paras.ayer123@gmail.com</a></td>
+                                <td>+977-9865623115</td>
+                                <td>Hello! Please app.</td>
+                                <td>
+                                    <a href="#" class="view-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                       
+            </div>
         </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        var submenuLinks = document.querySelectorAll('.has-submenu > a');
-        var sidebar = document.querySelector('.sidebar');
-        var toggleButton = document.querySelector('.toggle-button');
+            var submenuLinks = document.querySelectorAll('.has-submenu > a');
+            var sidebar = document.querySelector('.sidebar');
+            var toggleButton = document.querySelector('.toggle-button');
+            var closeIcon = document.querySelector('.close-icon');
 
-        submenuLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var submenu = this.nextElementSibling;
-                var icon = this.querySelector('.toggle-icon');
-                if (submenu.style.display === 'block') {
-                    submenu.style.display = 'none';
-                    icon.classList.remove('rotate');
-                } else {
-                    submenu.style.display = 'block';
-                    icon.classList.add('rotate');
-                }
+            submenuLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var submenu = this.nextElementSibling;
+                    var icon = this.querySelector('.toggle-icon');
+                    if (submenu.style.display === 'block') {
+                        submenu.style.display = 'none';
+                        icon.classList.remove('rotate');
+                    } else {
+                        submenu.style.display = 'block';
+                        icon.classList.add('rotate');
+                    }
+                });
+            });
+
+            toggleButton.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+
+            closeIcon.addEventListener('click', function() {
+                sidebar.classList.remove('active');
             });
         });
-
-        toggleButton.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
-        });
-    });
     </script>
 </body>
 </html>
