@@ -55,6 +55,11 @@ body, html {
     padding: 15px 0;
 }
 
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
@@ -63,13 +68,17 @@ body, html {
     font-size: 15px;
 }
 
+.sidebar ul li a:hover {
+    color: #a80404;
+}
+
 .sidebar ul li a i {
     margin-right: 10px;
 }
 
 .sidebar ul .submenu {
     display: none;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .sidebar ul .submenu li {
@@ -225,16 +234,17 @@ body, html {
     text-decoration: none;
 }
 
-.enquiries .view-icon, .enquiries{
+.enquiries .view-icon, .enquiries {
     margin-right: 10px;
     color: #0a5889;
     cursor: pointer;
 }
-.edit-icon i{
+.edit-icon i {
     margin-right: 10px;
     color: #a80404;
     cursor: pointer;
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .sidebar {
