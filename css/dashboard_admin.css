@@ -1,3 +1,7 @@
+::selection{
+    background-color: #a80404;
+    color: white;
+}
 * {
     margin: 0;
     padding: 0;
