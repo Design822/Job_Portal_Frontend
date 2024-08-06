@@ -208,7 +208,11 @@ body, html {
 .enquiries {
     border-radius: 5px;
 }
-
+.enquiries-table-wrapper img {
+    width: 50px; /* Adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 50px; /* Optional: limits height */
+}
 .enquiries-table-wrapper {
     overflow-x: auto;
     border-radius: 5px;
