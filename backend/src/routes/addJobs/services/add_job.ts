@@ -266,8 +266,30 @@ const getJobsByCompanyID = async (
   next: NextFunction
 ) => {
   try {
+    const company_id = req.params.company_id;
+    const company = await db("company").where({ id: company_id }).first();
+    if (company) {
+      const jobs = await db("addJob")
+        .where({ company_id: company_id })
+        .join("category", "addJob.category_id", "category.id")
+        .leftJoin("company", "addJob.company_id", "company.id")
+        .select(
+          "addJob.*",
+          "category.category_name",
+          "category.accepted",
+          "company.name_of_company",
+          "company.company_email",
+          "company.image",
+          "company.company_address"
+        );
+      res
+        .status(202)
+        .json(responder(true, `Jobs in company id: ${company_id}`, jobs));
+    } else {
+      return res.status(404).json(responder(false, `company ont register`));
+    }
   } catch (error) {
     errorLog(error, res, next);
   }
 };
-export { getJobs, updatejob, addJob, deleteJob };
+export { getJobs, updatejob, addJob, deleteJob, getJobsByCompanyID };

@@ -12,6 +12,7 @@ export async function up(knex: Knex): Promise<void> {
     table.string("address");
     table.enum("gender", ["male", "female", "other"]);
     table.string("password");
+    table.string("post");
     table.timestamps(true, true);
     table.integer("category_job_seeker_id").unsigned();
     table

@@ -1,10 +1,16 @@
 import { Router } from "express";
-import { getJobs, updatejob, deleteJob, addJob } from "./services/add_job";
+import {
+  getJobs,
+  updatejob,
+  deleteJob,
+  addJob,
+  getJobsByCompanyID,
+} from "./services/add_job";
 
 const router = Router();
 
 router.route("/").get(getJobs).patch(updatejob).delete(deleteJob);
 
-router.post("/:company_id", addJob);
+router.route("/:company_id").get(getJobsByCompanyID).post(addJob);
 
 export default router;
