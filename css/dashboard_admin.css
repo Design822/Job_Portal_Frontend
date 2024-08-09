@@ -612,6 +612,7 @@ table img {
 .edit-btn:hover, .delete-btn:hover {
     opacity: 0.8;
 }
+
 table td {
     padding: 10px;
     text-align: left;
@@ -620,4 +621,50 @@ table td {
 
 table th:last-child, table td:last-child {
     text-align: center; /* Center the action buttons */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content-box {
+        padding: 15px;
+    }
+
+    .content-box h2 {
+        font-size: 16px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .delete-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        padding: 10px;
+    }
+
+    .content-box h2 {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .action-btn, .delete-btn {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
 }
