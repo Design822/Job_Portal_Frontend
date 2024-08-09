@@ -24,7 +24,7 @@ body, html {
     width: 250px;
     background-color: #0a5889;
     color: #fff;
-    height: 100vh;
+    height: 290vh;
     padding: 20px;
     transition: transform 0.3s ease;
     overflow-y: auto; /* Enable vertical scrolling */
@@ -88,18 +88,18 @@ body, html {
 .sidebar ul .submenu li {
     padding: 10px 0;
 }
-/* Sidebar-home Styles */
+/* Sidebar Styles */
 .sidebar-home {
     width: 250px;
     background-color: #0a5889;
     color: #fff;
-    height: 200vh;
+    height: 100vh;
     padding: 20px;
     transition: transform 0.3s ease;
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.sidebar-home .active {
+.sidebar-home.active {
     transform: translateX(-100%);
 }
 
@@ -544,4 +544,72 @@ input[type="file"] {
     .footer-image-preview button {
         padding: 3px 6px;
     }
+}
+
+
+
+.content-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+table img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.action-btn {
+    background-color: #1674AA;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+}
+
+.edit-btn i, .delete-btn i {
+    font-size: 14px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 0.8;
+}
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th:last-child, table td:last-child {
+    text-align: center; /* Center the action buttons */
 }
