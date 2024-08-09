@@ -438,6 +438,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+
 .footer-form-section {
     border: 1px solid #eee;
     border-radius: 8px;
@@ -468,6 +469,13 @@ input[type="file"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
+}
+input[type="title"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 500px;
     font-size: 14px;
 }
 
