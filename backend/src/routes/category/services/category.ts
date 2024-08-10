@@ -117,4 +117,35 @@ const deleteCategoryByID = async (
   }
 };
 
-export { getCategory, createCategory, updateCategoryByID, deleteCategoryByID };
+const getJobsByCategoryID = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const id = req.query.id;
+    const jobByCategoryId = await db("addJob")
+      .where({ category_id: id })
+      .join("category", "addJob.category_id", "category.id")
+      .select("addJob.*", "category.category_name");
+    if (jobByCategoryId) {
+      return res
+        .status(200)
+        .json(responder(true, "Jobs on this category id", jobByCategoryId));
+    } else {
+      return res
+        .status(404)
+        .json(responder(false, `There are no job in this category`));
+    }
+  } catch (error) {
+    errorLog(error, res, next);
+  }
+};
+
+export {
+  getCategory,
+  createCategory,
+  updateCategoryByID,
+  deleteCategoryByID,
+  getJobsByCategoryID,
+};

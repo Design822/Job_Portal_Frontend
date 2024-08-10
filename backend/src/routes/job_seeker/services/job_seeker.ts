@@ -253,7 +253,9 @@ const loginJobSeeker = async (
               );
           } else {
             const secret = process.env.SECRET!;
-            const token = jwt.sign(user, secret, { expiresIn: "1D" });
+            const token = jwt.sign({ user, role: "job_seeker" }, secret, {
+              expiresIn: "1D",
+            });
             res.status(202).json({ messege: "Login sucessfully", token });
           }
         }

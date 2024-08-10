@@ -198,7 +198,9 @@ const loginCompany = async (
               );
           } else {
             const secret = process.env.SECRET!;
-            const token = jwt.sign(user, secret, { expiresIn: "1D" });
+            const token = jwt.sign({ user, role: "company" }, secret, {
+              expiresIn: "1D",
+            });
             res.status(202).json({ messege: "Login sucessfully", token });
           }
         }

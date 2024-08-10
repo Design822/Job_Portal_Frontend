@@ -2,8 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import categoryRoute from "./routes/category/index";
 import companyRoute from "./routes/company/index";
-import addJobRoute from "./routes/addJobs/index";
 import jobSeeker from "./routes/job_seeker/index";
+import adminRouter from "./routes/admin/index";
 dotenv.config();
 
 const app = express();
@@ -16,8 +16,8 @@ app.use("/image", express.static("public/"));
 
 app.use("/category", categoryRoute);
 app.use("/company", companyRoute);
-app.use("/add", addJobRoute);
 app.use("/job_seeker", jobSeeker);
+app.use("/admin", adminRouter);
 
 const port = process.env.PORT;
 

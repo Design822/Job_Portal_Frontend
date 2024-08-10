@@ -4,6 +4,7 @@ import {
   createCategory,
   updateCategoryByID,
   deleteCategoryByID,
+  getJobsByCategoryID,
 } from "./services/category";
 
 const router = Router();
@@ -14,5 +15,7 @@ router
   .post(createCategory)
   .patch(updateCategoryByID)
   .delete(deleteCategoryByID);
+
+router.get("/jobs_by_category", getJobsByCategoryID);
 
 export default router;

@@ -1,7 +1,8 @@
 import { Router } from "express";
-import addJob from "./add_job";
+import adminRouter from "./admin";
+
 const router = Router();
 
-router.use("/", addJob);
+router.use("/", adminRouter);
 
 export default router;
