@@ -189,88 +189,51 @@
     <section class="jobs">
         <h2>Top Jobs</h2>
         <br><br>
-        <div class="job-list">
-            <div class="job-item">
-                <img src="images/image1.png" alt="Job 1">
-                <h3>Atlantis the Palm</h3>
-                <p>LT#3476584</p>
-                <p>DUBAI, United Arab Emirates</p>
-                <p>1000 AED Monthly</p>
-                <p>Thu Mar 14, 2024</p>
-                <p>Waiter</p>
-                <button>View More</button>
+       
+            <div class="job-list">
+                <script>
+                    fetch('/company/add?id=0')
+    .then(response => response.json())
+    .then(response => {
+        console.log(response); // Inspect the data structure here
+
+        // Assuming data.jobs is the array
+        const jobs = response.data;
+        console.log(jobs)
+
+        if (Array.isArray(jobs)) {
+            jobs.forEach(job => {
+                const jobList = document.querySelector('.job-list')
+                console.log(jobList);
+                const jobItem = document.createElement('div');
+                jobItem.classList.add('job-item');
+
+                jobItem.innerHTML = `
+                    <img src="${job.filename }">
+                    <h3>${job.title}</h3>
+                    <p>${job.position}</p>
+                    <p>${job.salary} AED Monthly</p>
+                    <p>${job.gender}</p>
+                    <p>${job.time} </p>
+                    <p>${job.education_required}</p>
+                     <p>${job.job_summary}</p>
+                      <p>${job.job_description}</p>
+                       <p>${job.skills}</p>
+                    <p>${new Date(job.starting_date).toDateString()}</p>
+                    <p>${new Date(job.ending_date).toDateString()}</p>
+                    <p>${job.position}</p>
+                    <button>View More</button>
+                `;
+
+                jobList.appendChild(jobItem);
+            });
+        } else {
+            console.error('Expected an array, but got:', jobs);
+        }
+    })
+    .catch(error => console.error('Error fetching job data:', error));
+                </script>
             </div>
-            <div class="job-item">
-                <img src="images/image2.png" alt="Job 2">
-                <h3>Atlantis the Royal</h3>
-                <p>LT#3476584</p>
-                <p>DUBAI, United Arab Emirates</p>
-                <p>1000 AED Monthly</p>
-                <p>Thu Mar 15, 2024</p>
-                <p>F&B Attendent</p>
-                <button>View More</button>
-            </div>
-            <div class="job-item">
-                <img src="images/image3.png" alt="Job 3">
-                <h3>One & Only Royal Mirage</h3>
-                <p>LT#3476584</p>
-                <p>DUBAI, United Arab Emirates</p>
-                <p>1000 AED Monthly</p>
-                <p>Thu Mar 16, 2024</p>
-                <p>Head Chief</p>
-                <button>View More</button>
-            </div>
-            <div class="job-item">
-                <img src="images/image4.jpg" alt="Job 4">
-                <h3>Dunkin' Donuts</h3>
-                <p>LT#3443581</p>
-                <p>Kuwait</p>
-                <p>KD. 140 Monthly</p>
-                <p>Thu Mar 17, 2024</p>
-                <p>Waiter</p>
-                <button>View More</button>
-            </div>
-            <div class="job-item">
-                <img src="images/image1.png" alt="Job 1">
-                <h3>Atlantis the Palm</h3>
-                <p>LT#3476584</p>
-                <p>DUBAI, United Arab Emirates</p>
-                <p>1000 AED Monthly</p>
-                <p>Thu Mar 14, 2024</p>
-                <p>Waiter</p>
-                <button>View More</button>
-            </div>
-            <div class="job-item">
-                <img src="images/image2.png" alt="Job 2">
-                <h3>Atlantis the Royal</h3>
-                <p>LT#3476584</p>
-                <p>DUBAI, United Arab Emirates</p>
-                <p>1000 AED Monthly</p>
-                <p>Thu Mar 15, 2024</p>
-                <p>F&B Attendent</p>
-                <button>View More</button>
-            </div>
-            <div class="job-item">
-                <img src="images/image3.png" alt="Job 3">
-                <h3>One & Only Royal Mirage</h3>
-                <p>LT#3476584</p>
-                <p>DUBAI, United Arab Emirates</p>
-                <p>1000 AED Monthly</p>
-                <p>Thu Mar 16, 2024</p>
-                <p>Head Chief</p>
-                <button>View More</button>
-            </div>
-            <div class="job-item">
-                <img src="images/image4.jpg" alt="Job 4">
-                <h3>Dunkin' Donuts</h3>
-                <p>LT#3443581</p>
-                <p>Kuwait</p>
-                <p>KD. 140 Monthly</p>
-                <p>Thu Mar 17, 2024</p>
-                <p>Waiter</p>
-                <button>View More</button>
-            </div>
-        </div>
     </section>
     <br><br><br><br><br>
     <section class="jobs">
