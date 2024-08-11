@@ -189,51 +189,50 @@
     <section class="jobs">
         <h2>Top Jobs</h2>
         <br><br>
-       
             <div class="job-list">
                 <script>
                     fetch('/company/add?id=0')
-    .then(response => response.json())
-    .then(response => {
-        console.log(response); // Inspect the data structure here
+                    .then(response => response.json())
+                    .then(response => {
+                    console.log(response); // Inspect the data structure here
 
-        // Assuming data.jobs is the array
-        const jobs = response.data;
-        console.log(jobs)
+                    // Assuming data.jobs is the array
+                    const jobs = response.data;
+                    console.log(jobs)
 
-        if (Array.isArray(jobs)) {
-            jobs.forEach(job => {
-                const jobList = document.querySelector('.job-list')
-                console.log(jobList);
-                const jobItem = document.createElement('div');
-                jobItem.classList.add('job-item');
+                if (Array.isArray(jobs)) {
+                    jobs.forEach(job => {
+                    const jobList = document.querySelector('.job-list')
+                    console.log(jobList);
+                    const jobItem = document.createElement('div');
+                    jobItem.classList.add('job-item');
 
-                jobItem.innerHTML = `
-                    <img src="${job.filename }">
-                    <h3>${job.title}</h3>
-                    <p>${job.position}</p>
-                    <p>${job.salary} AED Monthly</p>
-                    <p>${job.gender}</p>
-                    <p>${job.time} </p>
-                    <p>${job.education_required}</p>
-                     <p>${job.job_summary}</p>
-                      <p>${job.job_description}</p>
-                       <p>${job.skills}</p>
-                    <p>${new Date(job.starting_date).toDateString()}</p>
-                    <p>${new Date(job.ending_date).toDateString()}</p>
-                    <p>${job.position}</p>
-                    <button>View More</button>
-                `;
+                    jobItem.innerHTML = `
+                        <img src="${job.filename }">
+                        <h3>${job.title}</h3>
+                        <p>${job.position}</p>
+                        <p>${job.salary} AED Monthly</p>
+                        <p>${job.gender}</p>
+                        <p>${job.time} </p>
+                        <p>${job.education_required}</p>
+                        <p>${job.job_summary}</p>
+                        <p>${job.job_description}</p>
+                        <p>${job.skills}</p>
+                        <p>${new Date(job.starting_date).toDateString()}</p>
+                        <p>${new Date(job.ending_date).toDateString()}</p>
+                        <p>${job.position}</p>
+                        <button>View More</button>
+                    `;
 
-                jobList.appendChild(jobItem);
-            });
-        } else {
-            console.error('Expected an array, but got:', jobs);
-        }
-    })
-    .catch(error => console.error('Error fetching job data:', error));
-                </script>
-            </div>
+                    jobList.appendChild(jobItem);
+                    });
+                } else {
+                    console.error('Expected an array, but got:', jobs);
+                    }
+                })
+                .catch(error => console.error('Error fetching job data:', error));
+            </script>
+        </div>
     </section>
     <br><br><br><br><br>
     <section class="jobs">
